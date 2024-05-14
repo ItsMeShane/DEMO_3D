@@ -9,6 +9,8 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector4f;
 import shaders.StaticShader;
+import shaders.TerrainShader;
+import terrains.Terrain;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,21 +30,26 @@ public class MasterRenderer {
     private Matrix4f projectionMatrix;
 
     private final StaticShader entityShader = new StaticShader();
+    private final TerrainShader terrainShader = new TerrainShader();
 
 
     private final EntityRenderer entityRenderer;
+    private final TerrainRenderer terrainRenderer;
 
     private final Map<TexturedModel, List<Entity>> entities = new HashMap<>();
+    private final List<Terrain> terrains = new ArrayList<>();
 
     public MasterRenderer() {
         enableCulling();
         createProjectionMatrix();
         entityRenderer = new EntityRenderer(entityShader, projectionMatrix);
+        terrainRenderer = new TerrainRenderer(terrainShader, projectionMatrix);
     }
 
-    public void renderScene(List<Entity> entities, List<Light> lights, Camera camera, Vector4f clipPlane) {
+    public void renderScene(List<Entity> entities, Terrain terrain, List<Light> lights, Camera camera, Vector4f clipPlane) {
 
-
+        // terrain
+        processTerrain(terrain);
 
         // entities
         for (Entity entity : entities)
@@ -66,6 +73,16 @@ public class MasterRenderer {
 
     private void render(List<Light> lights, Camera camera, Vector4f clipPlane) {
         prepare();
+
+        // terrain
+        terrainShader.start();
+        terrainShader.loadClipPlane(clipPlane);
+        terrainShader.loadSkyColor(SKY_RED, SKY_GREEN, SKY_BLUE);
+        terrainShader.loadLights(lights);
+        terrainShader.loadViewMatrix(camera);
+        terrainRenderer.render(terrains);
+        terrainShader.stop();
+
         // entities
         entityShader.start();
         entityShader.loadClipPlane(clipPlane);
@@ -76,8 +93,12 @@ public class MasterRenderer {
         entityShader.stop();
 
         entities.clear();
+        terrains.clear();
     }
 
+    public void processTerrain(Terrain terrain) {
+        terrains.add(terrain);
+    }
 
     public void processEntity(Entity entity) {
         TexturedModel entityModel = entity.getModel();

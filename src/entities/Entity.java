@@ -2,6 +2,7 @@ package entities;
 
 import models.TexturedModel;
 import org.lwjgl.util.vector.Vector3f;
+import terrains.Terrain;
 
 
 public class Entity {
@@ -17,15 +18,13 @@ public class Entity {
 	private String objPath;
 	private String texturePath;
 
-	public Entity(TexturedModel model, Vector3f position, float rotX, float rotY, float rotZ, float scale, String name) {
+	public Entity(TexturedModel model, float scale, String name) {
 		setModel(model);
 		setName(name);
-		this.position = position; // dont change
-		setRotX(rotX);
-		setRotY(rotY);
-		setRotZ(rotZ);
 		setScale(scale);
+		setPosition(new Vector3f());
 	}
+
 	public Entity(TexturedModel model, int textureIndex, Vector3f position, float rotX, float rotY, float rotZ, float scale) {
 		this.textureIndex = textureIndex;
 		setModel(model);
@@ -73,7 +72,15 @@ public class Entity {
 
 	public void setPosition(Vector3f position) {
 		this.position = position;
+	}
+	public void setPosition(float x, Terrain terrain, float z) {
+		this.position = new Vector3f(x, terrain.getHeightOfTerrain(x, z), z);
+	}
 
+	public void setRotation(Vector3f rot) {
+		setRotX(rot.getX());
+		setRotY(rot.getY());
+		setRotZ(rot.getZ());
 	}
 
 	public float getRotX() {

@@ -5,6 +5,7 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.util.vector.Vector3f;
 import renderEngine.DisplayManager;
+import terrains.Terrain;
 
 import java.io.Serializable;
 
@@ -26,9 +27,9 @@ public class Camera implements Serializable {
 	}
 
 
-	public void move() {
+	public void move(Terrain terrain) {
 
-		focusPoint.move(angleAroundFocusPoint);
+		focusPoint.move(terrain, angleAroundFocusPoint);
 
 		calculateZoom();
 		calculatePitch();
@@ -132,7 +133,7 @@ public class Camera implements Serializable {
 			this.position = position;
 		}
 
-		public void move(float cameraRotation) {
+		public void move(Terrain terrain, float cameraRotation) {
 			checkInputs();
 
 			float delta = DisplayManager.getFrameTimeSeconds();
@@ -151,12 +152,10 @@ public class Camera implements Serializable {
 			float translatedDz = dx * sinRotation + dz * cosRotation;
 
 			increasePosition(translatedDx, 0, translatedDz);
+			getPosition().y = terrain.getHeightOfTerrain(getPosition().x, getPosition().z);
 		}
 
 		private void increasePosition(float dx, float dy, float dz) {
-//			this.position.x += dx;
-//			this.position.y += dy;
-//			this.position.z += dz;
 			position.translate(dx, dy, dz);
 		}
 
