@@ -22,9 +22,9 @@ public class MasterRenderer {
     private static final float NEAR_PLANE = 0.1f; // how close you can see
     private static final float FAR_PLANE = 750;   // how far you can see
 
-    private static final float SKY_RED   =  88 / 256f;
-    private static final float SKY_GREEN =  66 / 256f;
-    private static final float SKY_BLUE  =  66 / 256f;
+    private static final float SKY_RED   =  91 / 256f;
+    private static final float SKY_GREEN =  144 / 256f;
+    private static final float SKY_BLUE  =  192 / 256f;
 
 
     private Matrix4f projectionMatrix;
@@ -35,6 +35,7 @@ public class MasterRenderer {
 
     private final EntityRenderer entityRenderer;
     private final TerrainRenderer terrainRenderer;
+    private final SkyboxRenderer skyboxRenderer;
 
     private final Map<TexturedModel, List<Entity>> entities = new HashMap<>();
     private final List<Terrain> terrains = new ArrayList<>();
@@ -44,6 +45,7 @@ public class MasterRenderer {
         createProjectionMatrix();
         entityRenderer = new EntityRenderer(entityShader, projectionMatrix);
         terrainRenderer = new TerrainRenderer(terrainShader, projectionMatrix);
+        skyboxRenderer = new SkyboxRenderer(projectionMatrix);
     }
 
     public void renderScene(List<Entity> entities, Terrain terrain, List<Light> lights, Camera camera, Vector4f clipPlane) {
@@ -91,6 +93,8 @@ public class MasterRenderer {
         entityShader.loadViewMatrix(camera);
         entityRenderer.render(entities);
         entityShader.stop();
+
+        skyboxRenderer.render(camera, SKY_RED, SKY_GREEN, SKY_BLUE);
 
         entities.clear();
         terrains.clear();

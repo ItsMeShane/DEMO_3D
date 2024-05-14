@@ -51,6 +51,7 @@ public class Main {
 
 		Entity tree = generateEntity("models/tree2.obj", "textures/tree2.png", 1.8f, 0.1f, "Tree");
 		tree.setPosition(-10, terrain, 10);
+		tree.getPosition().y-=2.4f; // put roots underground
 
 		entities.add(car);
 		entities.add(tree);

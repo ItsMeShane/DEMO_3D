@@ -16,8 +16,8 @@ public class StaticShader extends ShaderProgram{
 
 	private static final int MAX_LIGHTS = 3;
 
-	private static final String VERTEX_FILE = "shaders/glsl/vertexShader.glsl";
-	private static final String FRAGMENT_FILE = "shaders/glsl/fragmentShader.glsl";
+	private static final String VERTEX_FILE = "shaders/glsl/staticVertexShader.glsl";
+	private static final String FRAGMENT_FILE = "shaders/glsl/staticFragmentShader.glsl";
 
 	private int location_transformationMatrix;
 	private int location_projectionMatrix;

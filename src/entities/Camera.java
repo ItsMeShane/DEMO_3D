@@ -54,8 +54,8 @@ public class Camera implements Serializable {
 	private void calculateZoom() {
 		float zoomLevel = Mouse.getDWheel() * 0.1f;
 		distanceFromFocusPoint -= zoomLevel;
-//		distanceFromFocusPoint = Math.min(distanceFromFocusPoint, 125);// max distance from focus point
-//		distanceFromFocusPoint = Math.max(distanceFromFocusPoint, 25); // min distance from focus point
+		distanceFromFocusPoint = Math.min(distanceFromFocusPoint, 125);// max distance from focus point
+		distanceFromFocusPoint = Math.max(distanceFromFocusPoint, 25); // min distance from focus point
 
 	}
 
