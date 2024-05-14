@@ -17,7 +17,7 @@ uniform vec3 lightPosition;
 const float tiling = 4.0;
 
 // fog
-const float density = 0.002; // 0.0035
+const float density = 0.0025;
 const float gradient = 5;
 
 void main(void) {

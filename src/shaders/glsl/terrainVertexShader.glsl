@@ -16,7 +16,7 @@ uniform mat4 viewMatrix;
 uniform vec3 lightPosition[3];
 
 // fog
-const float density = 0.002; // 0.0035
+const float density = 0.0025;
 const float gradient = 5;
 
 uniform vec4 plane;

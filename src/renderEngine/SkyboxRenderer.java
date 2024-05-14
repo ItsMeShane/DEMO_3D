@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 public class SkyboxRenderer implements Serializable {
 
-    private static final float SIZE = 500f;
+    private static final float SIZE = 450f;
 
     private static final float[] VERTICES = {
             -SIZE,  SIZE, -SIZE,

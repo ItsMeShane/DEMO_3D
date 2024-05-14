@@ -21,7 +21,7 @@ uniform float numberOfRows;
 uniform vec2 offset;
 
 // fog
-const float density = 0.0; // 0.003
+const float density = 0.0025;
 const float gradient = 5;
 
 uniform vec4 plane;

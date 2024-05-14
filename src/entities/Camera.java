@@ -39,6 +39,7 @@ public class Camera implements Serializable {
 		float verticalDistance = calculateVerticalDistance();
 		calculateCameraPosition(horizonDistance, verticalDistance);
 		setYaw(180 - angleAroundFocusPoint);
+		viewPointPosition.y = Math.max(terrain.getHeightOfTerrain(viewPointPosition.x, viewPointPosition.z) + 1, viewPointPosition.y);
 	}
 
 	private void calculateCameraPosition(float horizontalDistance, float verticalDistance) {
@@ -63,8 +64,8 @@ public class Camera implements Serializable {
 		if (Mouse.isButtonDown(0)) {
 			float pitchChange = Mouse.getDY() * 0.1f;
 			setPitch(getPitch() - pitchChange);
-//			pitch = Math.min(pitch, 70);// max view angle
-//			pitch = Math.max(pitch, 0); // min view angle
+			pitch = Math.min(pitch, 70);// max view angle
+			pitch = Math.max(pitch, 0); // min view angle
 		}
 	}
 
