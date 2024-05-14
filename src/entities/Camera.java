@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class Camera implements Serializable {
 
 	private float distanceFromFocusPoint = 75;
-	private float angleAroundFocusPoint = 0;
+	private float angleAroundFocusPoint = 180;
 	private float angleAboveFocusPoint = 0;
 
 	public static float FOV = 70;
