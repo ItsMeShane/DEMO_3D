@@ -46,9 +46,6 @@ public class MasterRenderer {
         entityRenderer = new EntityRenderer(entityShader, projectionMatrix);
         terrainRenderer = new TerrainRenderer(terrainShader, projectionMatrix);
         skyboxRenderer = new SkyboxRenderer(projectionMatrix);
-        System.out.println(SKY_RED);
-        System.out.println(SKY_GREEN);
-        System.out.println(SKY_BLUE);
     }
 
     public void renderScene(List<Entity> entities, Terrain terrain, List<Light> lights, Camera camera, Vector4f clipPlane) {
