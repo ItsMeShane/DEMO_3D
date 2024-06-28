@@ -138,4 +138,9 @@ public class Entity {
 	public void setTexturePath(String texturePath, boolean shouldUpdateModel) {
 		this.texturePath = texturePath;
 	}
+
+	@Override
+	public String toString() {
+		return getName();
+	}
 }

@@ -46,7 +46,7 @@ public class Main {
 		ParticleMaster.init(renderer.getProjectionMatrix());
 		ParticleSystem fireworkParticles = new ParticleSystem(new ParticleTexture(Loader.loadTexture("particles/fireworks.png"), 4), 15, 50, 2, 10, -50f);
 		fireworkParticles.setDirection(new Vector3f(0, 1, 0), 0.1f);
-		ParticleSystem smokeParticles = new ParticleSystem(new ParticleTexture(Loader.loadTexture("particles/smoke.png"), 8), 20, 10, 1, 10, -7);
+		ParticleSystem smokeParticles = new ParticleSystem(new ParticleTexture(Loader.loadTexture("particles/smoke.png"), 8), 120, 10, 1, 10, -7);
 		smokeParticles.setDirection(new Vector3f(0, 1, 0), 0.3f);
 
 		// terrain
@@ -72,8 +72,10 @@ public class Main {
 
 		// lights
 		Light sun = new Light(new Vector3f(0, 175, 0), new Vector3f(0.8f, 0.8f, 0.7f), new Vector3f(0.196f, 0.0013f, 3.8E-6f));
+		sun.setName("Sun");
 		lights.add(sun);
 		Light waterLight = new Light(new Vector3f(0, 20, -250), new Vector3f(0.8f, 0.8f, 0.6f), new Vector3f(0.2f, 0.015f, 1.0E-5f));
+		waterLight.setName("WaterLight");
 		lights.add(waterLight);
 
 		// water
@@ -86,6 +88,9 @@ public class Main {
 
 		Entity selectedEntity = null; // used to interact with entities
 
+
+		// editor
+		new Editor(entities, lights, camera);
 
 		while (!Display.isCloseRequested()) {
 			camera.move(terrain);

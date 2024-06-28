@@ -52,7 +52,7 @@ public class ModelTexture {
 		this.hasTransparency = hasTransparency;
 	}
 
-	public boolean isUseFakeLighting() {
+	public boolean isUsingFakeLighting() {
 		return useFakeLighting;
 	}
 

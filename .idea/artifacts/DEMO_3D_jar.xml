@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DEMO_3D:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DEMO_3D_jar</output-path>
+    <root id="archive" name="DEMO_3D.jar">
+      <element id="module-output" name="DEMO_3D" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/lwjgl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/lwjgl_util.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/PNGDecoder.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jars/slick-util.jar" path-in-jar="/" />
+      <element id="library" level="project" name="libs" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jars/lwjgl.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jars/lwjgl_util.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jars/PNGDecoder.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/libs/jars/slick-util.jar" />
+    </root>
+  </artifact>
+</component>

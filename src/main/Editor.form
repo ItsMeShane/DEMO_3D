@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="main.Editor">
+  <grid id="27dc6" binding="editorContainer" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="600"/>
+    </constraints>
+    <properties>
+      <minimumSize width="400" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="3d59e" binding="editorTabbedPane">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="1b244" binding="entityTab" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Entities"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="46926" binding="entityScrollPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="cb369" binding="entityWrapper" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="2cef2" class="javax.swing.JComboBox" binding="entityComboBox">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <grid id="2661f" binding="entityPropertyContainer" layout-manager="GridLayoutManager" row-count="9" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="4f40a" binding="zPositionContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="a84bd" class="javax.swing.JSpinner" binding="zPositionSpinner">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="6c6c2" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Z Position"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="32734" binding="yPositionContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="1d32a" class="javax.swing.JSpinner" binding="yPositionSpinner">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="ed687" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Y Position"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="592a0" binding="xPositionContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="9931e" class="javax.swing.JSpinner" binding="xPositionSpinner">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="56c86" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="X Position"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="466eb" binding="xRotationContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <alignmentY value="0.5"/>
+                              <autoscrolls value="false"/>
+                            </properties>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="a2e18" class="javax.swing.JSlider" binding="xRotationSlider">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="1.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <majorTickSpacing value="90"/>
+                                  <maximum value="360"/>
+                                  <minimum value="0"/>
+                                  <minorTickSpacing value="0"/>
+                                  <opaque value="true"/>
+                                  <paintLabels value="false"/>
+                                  <paintTicks value="false"/>
+                                  <paintTrack value="true"/>
+                                  <snapToTicks value="false"/>
+                                  <valueIsAdjusting value="false"/>
+                                </properties>
+                                <clientProperties>
+                                  <JSlider.isFilled class="java.lang.Boolean" value="false"/>
+                                </clientProperties>
+                              </component>
+                              <component id="b3050" class="javax.swing.JSpinner" binding="xRotationSpinner">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="d63a1" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="X Rotation"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="50811" binding="yRotationContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="7e200" class="javax.swing.JSlider" binding="yRotationSlider">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="1.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <majorTickSpacing value="90"/>
+                                  <maximum value="360"/>
+                                  <minimum value="0"/>
+                                  <minorTickSpacing value="0"/>
+                                  <opaque value="true"/>
+                                  <paintLabels value="false"/>
+                                  <paintTicks value="false"/>
+                                  <paintTrack value="true"/>
+                                  <snapToTicks value="false"/>
+                                  <valueIsAdjusting value="false"/>
+                                </properties>
+                              </component>
+                              <component id="b7c4e" class="javax.swing.JSpinner" binding="yRotationSpinner">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="36a3" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Y Rotation"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="220d2" binding="zRotationContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="346df" class="javax.swing.JSlider" binding="zRotationSlider">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="1.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <majorTickSpacing value="90"/>
+                                  <maximum value="360"/>
+                                  <minimum value="0"/>
+                                  <minorTickSpacing value="0"/>
+                                  <opaque value="true"/>
+                                  <paintLabels value="false"/>
+                                  <paintTicks value="false"/>
+                                  <paintTrack value="true"/>
+                                  <snapToTicks value="false"/>
+                                  <valueIsAdjusting value="false"/>
+                                </properties>
+                              </component>
+                              <component id="bb3e0" class="javax.swing.JSpinner" binding="zRotationSpinner">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="dfbde" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Z Rotation"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="a4d8a" binding="scaleContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="c93f9" class="javax.swing.JSpinner" binding="scaleSpinner">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <preferredSize width="90" height="30"/>
+                                </properties>
+                              </component>
+                              <component id="5db9b" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Scale         "/>
+                                </properties>
+                              </component>
+                              <component id="6c3fb" class="javax.swing.JSlider" binding="scaleSlider">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="1.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <maximum value="100"/>
+                                  <maximumSize width="200" height="24"/>
+                                  <minimum value="1"/>
+                                  <value value="1"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="a8fd" binding="useFakeLightingContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="5a06a" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Use Fake Lighting"/>
+                                </properties>
+                              </component>
+                              <component id="5f113" class="javax.swing.JCheckBox" binding="useFakeLightingCheckBox">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="5" left="5" bottom="5" right="5" weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                          <grid id="5fa58" binding="entityNameContainer" layout-manager="GridBagLayout">
+                            <constraints>
+                              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="etched">
+                              <color color="-9276814"/>
+                            </border>
+                            <children>
+                              <component id="4e433" class="javax.swing.JLabel">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                  <gridbag top="0" left="5" bottom="0" right="0" weightx="0.2" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Name"/>
+                                </properties>
+                              </component>
+                              <component id="98fc3" class="javax.swing.JTextField" binding="entityNameTextField">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                                    <preferred-size width="150" height="-1"/>
+                                  </grid>
+                                  <gridbag top="1" left="3" bottom="1" right="3" weightx="0.1" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <text value=""/>
+                                </properties>
+                              </component>
+                              <component id="eaf78" class="javax.swing.JButton" binding="updateEntityNameButton">
+                                <constraints>
+                                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                  <gridbag weightx="0.0" weighty="0.0"/>
+                                </constraints>
+                                <properties>
+                                  <borderPainted value="false"/>
+                                  <focusPainted value="false"/>
+                                  <focusable value="true"/>
+                                  <text value="Update"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="4779c" binding="lightTab" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Lights"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="3b890" binding="lightScrollPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="cf8e5" binding="lightWrapper" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="12763" class="javax.swing.JComboBox" binding="lightComboBox">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                      </component>
+                      <grid id="c055c" binding="lightPropertyContainer" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="2c42c" binding="cameraTab" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Camera"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
